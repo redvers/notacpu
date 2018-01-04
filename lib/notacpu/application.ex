@@ -9,7 +9,9 @@ defmodule Notacpu.Application do
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: Notacpu.Worker.start_link(arg)
-      # {Notacpu.Worker, arg},
+      {Notacpu.Cpu, nil},
+      {Notacpu.Memory, nil},
+      {Notacpu.Clockpanel, nil},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
